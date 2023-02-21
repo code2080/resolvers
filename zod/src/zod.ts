@@ -8,7 +8,7 @@ import { toNestError, validateFieldsNatively } from '@hookform/resolvers';
 import type { Resolver } from './types';
 
 const parseErrorSchema = (
-  zodErrors: z.ZodIssue[],
+  zodErrors: z.ZodIssue[] = [],
   validateAllFieldCriteria: boolean,
 ) => {
   const errors: Record<string, FieldError> = {};
